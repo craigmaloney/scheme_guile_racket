@@ -51,7 +51,9 @@ JavaScript’s C-like syntax, including curly braces and the clunky for statemen
 
 ----
 
-http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme/
+::
+
+    http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme/
 
 ----
 
@@ -108,7 +110,12 @@ Alas:
 
 Alas: Scheme has the unhappy distinction of being the world's most unportable programming language. It is almost misleading to call Scheme a "programming language;" it would be more accurate to characterise Scheme as a family of dialects, all loosely related by the common features of lexical scope, dynamic typing, list structure, higher-order functions, proper tail-recursion, garbage collection, macros, and (some form of) s-expression based lexical syntax.
 
+
+::
+
+    http://www.scheme-reports.org/2009/position-statement.html
     http://ur1.ca/r1dgx
+
 
 ----
 
@@ -116,6 +123,9 @@ Starting simple
 ===============
 
 ----
+
+A Few Basic Datatypes
+=====================
 
 Atoms:
 
@@ -132,7 +142,3 @@ Lists:
 * (list 3 4 5)
 * '(3 4 5)
 * (cons 3 (cons 4 (cons 5 '())))
-
-----
-
-
