@@ -15,6 +15,64 @@ Introduction to Scheme / Guile / Racket
 
 ----
 
+Our story begins
+================
+
+----
+
+Learning JavaScript...
+======================
+
+----
+
+.. image:: images/pepper_studying.png
+   :width: 800px
+
+----
+
+So naturally...
+===============
+
+----
+
+.. image:: images/pepper_exit.png
+   :width: 800px
+
+----
+
+But it's not as orthogonal as you might imagine...
+==================================================
+
+----
+
+JavaScript’s C-like syntax, including curly braces and the clunky for statement, makes it appear to be an ordinary procedural language. This is misleading because JavaScript has more in common with functional languages like Lisp or Scheme than with C or Java.
+
+**Douglas Crockford "Javascript, the Good Parts"**
+
+----
+
+http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme/
+
+----
+
+So why play with Scheme?
+========================
+
+----
+
+.. image:: images/pepper_summoning.png
+   :width: 800px
+
+----
+
+But really...
+=============
+
+.. image:: images/pepper_tea.png
+   :width: 800px
+
+----
+
 What we'll cover
 ================
 
@@ -51,3 +109,30 @@ Alas:
 Alas: Scheme has the unhappy distinction of being the world's most unportable programming language. It is almost misleading to call Scheme a "programming language;" it would be more accurate to characterise Scheme as a family of dialects, all loosely related by the common features of lexical scope, dynamic typing, list structure, higher-order functions, proper tail-recursion, garbage collection, macros, and (some form of) s-expression based lexical syntax.
 
     http://ur1.ca/r1dgx
+
+----
+
+Starting simple
+===============
+
+----
+
+Atoms:
+
+* 2
+* 4.2
+* "Hello World"
+* #f
+* a
+
+----
+
+Lists:
+
+* (list 3 4 5)
+* '(3 4 5)
+* (cons 3 (cons 4 (cons 5 '())))
+
+----
+
+
