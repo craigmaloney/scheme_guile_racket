@@ -62,6 +62,11 @@ So why play with Scheme?
 
 ----
 
+.. image:: images/pepper_symbols.jpg
+   :width: 500px
+
+----
+
 .. image:: images/pepper_summoning.png
    :width: 800px
 
@@ -80,7 +85,7 @@ What we'll cover
 
 * A brief history of Scheme
 * Basic Scheme syntax
-* Guile
+* Guile (GNU Scheme)
 * Racket (DrRacket)
 
 ----
@@ -142,3 +147,62 @@ Lists:
 * (list 3 4 5)
 * '(3 4 5)
 * (cons 3 (cons 4 (cons 5 '())))
+
+----
+
+Um, OK...
+=========
+
+----
+
+Arithmetic Operators
+====================
+
+* (+ 1 2)  => 3
+* (- 1 3)  => -2
+* (* 3 2)  => 6
+* (/ 2 3)  => 2/3
+
+----
+
+More Arithmetic Operators
+=========================
+
+* (+ 4 5 6 7 8)  => 30
+* (- 4 (* 6 5))  => -26
+* (/ 2 3 5)  => 2/15
+* (* 8 8 8) => 512
+
+----
+
+Variables
+=========
+
+* (define two 2)
+* (+ two two)  => 4
+* (define two 3)
+* (+ two two)  => 6
+
+----
+
+More Variables
+==============
+
+* (define two (+ 1 1))
+* (define four (+ two two))
+* four  => 4
+* (define eight (* four two))
+* eight  => 8
+
+----
+
+Those are some nice parlour tricks...
+=====================================
+
+----
+
+Simple function for computing n^2
+=================================
+
+* (define (square x) (* x x))
+* (define square (lambda(x) (* x x)))
