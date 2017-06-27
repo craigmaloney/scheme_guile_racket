@@ -201,8 +201,23 @@ Those are some nice parlour tricks...
 
 ----
 
+Built-in functions
+==================
+
+* (number? 4)  => #t
+* (number? 'moo)  => #f
+* (symbol? 'moo)  => #t
+* (symbol? 4)  => #f
+* (string? "Hello, I am a string")  => #t
+* (null? '())  => #t
+* (list? '())  => #t
+
+----
+
 Simple function for computing n^2
 =================================
 
 * (define (square x) (* x x))
 * (define square (lambda(x) (* x x)))
+
+----
