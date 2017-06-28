@@ -144,9 +144,9 @@ Atoms:
 
 Lists:
 
-* (list 3 4 5)
-* '(3 4 5)
-* (cons 3 (cons 4 (cons 5 '())))
+* ``(list 3 4 5)``
+* ``'(3 4 5)``
+* ``(cons 3 (cons 4 (cons 5 '())))``
 
 ----
 
@@ -158,41 +158,41 @@ Um, OK...
 Arithmetic Operators
 ====================
 
-* (+ 1 2)  => 3
-* (- 1 3)  => -2
-* (* 3 2)  => 6
-* (/ 2 3)  => 2/3
+* ``(+ 1 2)``  => 3
+* ``(- 1 3)``  => -2
+* ``(* 3 2)``  => 6
+* ``(/ 2 3)``  => 2/3
 
 ----
 
 More Arithmetic Operators
 =========================
 
-* (+ 4 5 6 7 8)  => 30
-* (- 4 (* 6 5))  => -26
-* (/ 2 3 5)  => 2/15
-* (* 8 8 8) => 512
+* ``(+ 4 5 6 7 8)``  => 30
+* ``(- 4 (* 6 5))``  => -26
+* ``(/ 2 3 5)``  => 2/15
+* ``(* 8 8 8)`` => 512
 
 ----
 
 Variables
 =========
 
-* (define two 2)
-* (+ two two)  => 4
-* (define two 3)
-* (+ two two)  => 6
+* ``(define two 2)``
+* ``(+ two two)``  => 4
+* ``(define two 3)``
+* ``(+ two two)``  => 6
 
 ----
 
 More Variables
 ==============
 
-* (define two (+ 1 1))
-* (define four (+ two two))
-* four  => 4
-* (define eight (* four two))
-* eight  => 8
+* ``(define two (+ 1 1))``
+* ``(define four (+ two two))``
+* ``four``  => 4
+* ``(define eight (* four two))``
+* ``eight``  => 8
 
 ----
 
@@ -204,20 +204,45 @@ Those are some nice parlour tricks...
 Built-in functions
 ==================
 
-* (number? 4)  => #t
-* (number? 'moo)  => #f
-* (symbol? 'moo)  => #t
-* (symbol? 4)  => #f
-* (string? "Hello, I am a string")  => #t
-* (null? '())  => #t
-* (list? '())  => #t
+* ``(number? 4)``  => #t
+* ``(number? 'moo)``  => #f
+* ``(symbol? 'moo)``  => #t
+* ``(symbol? 4)``  => #f
+* ``(string? "Hello, I am a string")``  => #t
+* ``(null? '())``  => #t
+* ``(list? '())``  => #t
 
 ----
 
 Simple function for computing n^2
 =================================
 
-* (define (square x) (* x x))
-* (define square (lambda(x) (* x x)))
+* ``(define (square x) (* x x))``
+* ``(define square (lambda(x) (* x x)))``
 
 ----
+
+Pythagorean Theorem in Scheme
+=============================
+
+(Remember: a^2 + b^2 = c^2)
+
+* ``(+ (square 5) (square 6))``
+
+----
+
+Fibonacci Sequence
+==================
+
+[INSERT FIBONACCI SEQUENCE HERE]
+
+----
+
+Running the Fibonacci Sequence
+==============================
+
+[INSERT RUNNING FIB SEQUENCE HERE]
+
+----
+
+
