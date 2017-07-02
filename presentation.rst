@@ -231,10 +231,44 @@ Pythagorean Theorem in Scheme
 
 ----
 
+Conditionals
+============
+
+::
+
+    (if (zero? 0)
+      (display "True\n")
+      (display "False\n"))
+
+    => True
+
+----
+
+Another Conditional
+===================
+
+::
+
+    (cond 
+      ((zero? 0) (display "True\n"))
+      ((not (zero? 1)) (display "Also True\n")))
+
+    => True
+
+----
+
 Fibonacci Sequence
 ==================
 
-[INSERT FIBONACCI SEQUENCE HERE]
+::
+
+  (define (fib n)
+    (cond
+      ((= n 0) 0)
+      ((= n 1) 1)
+      (else
+        (+ (fib (- n 1))
+           (fib (- n 2))))))
 
 ----
 
