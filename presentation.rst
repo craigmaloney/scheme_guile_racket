@@ -6,8 +6,8 @@
  
 ----
 
-Introduction to Scheme / Guile / Racket
-=======================================
+Introduction to Scheme, Guile, and Racket
+=========================================
 
 * Author: Craig Maloney
 * Email: craig@decafbad.net
@@ -283,5 +283,4 @@ Fibonacci Sequence
     $3 = 832040
            
 ----
-
 
