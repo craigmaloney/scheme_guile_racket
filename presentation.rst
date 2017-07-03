@@ -196,6 +196,15 @@ More Variables
 
 ----
 
+Latent typing
+=============
+* ``(define duck 4)``
+* ``(number? duck)  => #t``
+* ``(set! duck 'quack)``
+* ``(number> duck)  => #f``
+
+----
+
 Those are some nice parlour tricks...
 =====================================
 
@@ -270,13 +279,9 @@ Fibonacci Sequence
         (+ (fib (- n 1))
            (fib (- n 2))))))
 
-----
-
-Running the Fibonacci Sequence
-==============================
-
-[INSERT RUNNING FIB SEQUENCE HERE]
-
+    scheme@(guile-user) [2]> (fib 30)
+    $3 = 832040
+           
 ----
 
 
