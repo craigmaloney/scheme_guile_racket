@@ -15,8 +15,27 @@ Introduction to Scheme, Guile, and Racket
 
 ----
 
-Our story begins
-================
+Three Types of Folks...
+=======================
+
+----
+
+.. image:: images/scared.jpg
+    :width: 800px
+
+----
+
+.. image:: images/flying.gif
+
+----
+
+.. image:: images/laser.gif
+
+
+----
+
+Our story begins...
+===================
 
 ----
 
@@ -27,6 +46,11 @@ Learning JavaScript...
 
 .. image:: images/pepper_studying.png
    :width: 800px
+
+----
+
+But somewhere I heard that JavaScript borrowed from Scheme...
+=============================================================
 
 ----
 
@@ -45,11 +69,15 @@ But it's not as orthogonal as you might imagine...
 
 ----
 
-JavaScript’s C-like syntax, including curly braces and the clunky for statement, makes it appear to be an ordinary procedural language. This is misleading because JavaScript has more in common with functional languages like Lisp or Scheme than with C or Java.
+::
+
+    JavaScript’s C-like syntax, including curly braces and the clunky
+    for statement, makes it appear to be an ordinary procedural
+    language. This is misleading because JavaScript has more in 
+    common with functional languages like Lisp or Scheme
+    than with C or Java.
 
 **Douglas Crockford "Javascript, the Good Parts"**
-
-----
 
 ::
 
