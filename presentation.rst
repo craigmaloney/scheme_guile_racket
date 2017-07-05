@@ -223,8 +223,8 @@ Built-in functions
 
 ----
 
-Simple function for computing n^2
-=================================
+Simple prodecure (function)  for computing n^2
+==============================================
 
 * ``(define (square x) (* x x))``
 * ``(define square (lambda(x) (* x x)))``
@@ -237,6 +237,51 @@ Pythagorean Theorem in Scheme
 (Remember: a^2 + b^2 = c^2)
 
 * ``(+ (square 5) (square 6))``
+
+----
+
+Procedures are variables
+========================
+
+::
+    scheme@(guile-user)> (define (foo x) x)
+    scheme@(guile-user)> ,tr (foo 4)
+    trace: |  (#<procedure 1cf50e0> #(#<directory (guile-user) 1434c60> #f))
+    trace: |  #(#<directory (guile-user) 1434c60> foo)
+    trace: (#<procedure 1cff540 at <current input>:4:0 ()>)
+    trace: (foo 4)
+    trace: 4
+
+    scheme@(guile-user)> (define bar foo)
+    scheme@(guile-user)> ,tr (bar 5)
+    trace: |  (#<procedure 1d33580> #(#<directory (guile-user) 1434c60> #f))
+    trace: |  #(#<directory (guile-user) 1434c60> bar)
+    trace: (#<procedure 1d41980 at <current input>:5:0 ()>)
+    trace: (foo 5)
+    trace: 5
+    scheme@(guile-user)>
+
+----
+
+Procedures are variables
+========================
+
+::
+    scheme@(guile-user)> (define (foo x) (display "I refuse"))
+    scheme@(guile-user)> ,tr (bar 4)
+    trace: |  (#<procedure 1d7b100> #(#<directory (guile-user) 1434c60> #f))
+    trace: |  #(#<directory (guile-user) 1434c60> bar)
+    trace: (#<procedure 1d85560 at <current input>:6:0 ()>)
+    trace: (foo 4)
+    trace: 4
+    scheme@(guile-user)> ,tr (foo 4)
+    trace: |  (#<procedure 1da7d60> #(#<directory (guile-user) 1434c60> #f))
+    trace: |  #(#<directory (guile-user) 1434c60> foo)
+    trace: (#<procedure 1dad240 at <current input>:6:0 ()>)
+    trace: (foo 4)
+    trace: (display "I refuse")
+    I refusetrace: #<unspecified>
+    scheme@(guile-user)>
 
 ----
 
@@ -283,4 +328,5 @@ Fibonacci Sequence
     $3 = 832040
            
 ----
+
 
