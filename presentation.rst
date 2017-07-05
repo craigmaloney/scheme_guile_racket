@@ -357,4 +357,26 @@ Fibonacci Sequence
            
 ----
 
+Local Variables / Environment
+=============================
 
+* Each procedure can have its own local environment
+* We can create local variables with ``let``
+
+----
+
+::
+
+    (define s 42)
+
+    (define false-answer
+    (lambda ()
+    (let ((s #f))
+    (display s)
+    )))
+
+    (false-answer)  => #f
+
+    (display s)  => 42
+
+----
