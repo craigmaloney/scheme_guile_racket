@@ -178,6 +178,45 @@ Lists:
 
 ----
 
+Datatypes:
+
+* ``(string? "quack")  => #t``
+* ``(symbol? 'quack)  => #t``
+* ``(string? 'quack)  => #f``
+
+* ``(number? 42)  => #t``
+* ``(number? 4.2)  => #t``
+* ``(number? 1+1i)  => #t``
+* ``(real? 1+1i)  => #f``
+
+----
+
+Datatypes (cont.):
+
+* ``(real? 2/3)  => #t``
+* ``(exact? 2/3)  => #t``
+* ``(exact? 2.0)  => #f``
+* ``(integer? 2.0)  => #t``
+* ``(exact? (/ 4.0 2.0))  => #f``
+* ``(integer? (/ 4.0 2.0))  => #t``
+
+----
+
+Quick note on symbols / strings
+===============================
+
+Symbols are "interned", so there is only one copy stored of a particular symbol:
+
+* ``(define foo 'quack)``
+* ``(define bar 'quack)``
+* ``(eq? foo bar)  => #t``
+
+* ``(define foo "quack")``
+* ``(define bar "quack")``
+* ``(eq? foo bar)  => #f``
+
+----
+
 Um, OK...
 =========
 
@@ -251,7 +290,7 @@ Built-in functions
 
 ----
 
-Simple prodecure (function)  for computing n^2
+Simple procedure (function)  for computing n^2
 ==============================================
 
 * ``(define (square x) (* x x))``
@@ -372,10 +411,9 @@ Local Variables / Environment
     (define s 42)
 
     (define false-answer
-    (lambda ()
-    (let ((s #f))
-    (display s)
-    )))
+      (lambda ()
+        (let ((s #f))
+          (display s))))
 
     (false-answer)  => #f
 
