@@ -229,7 +229,7 @@ Latent typing
 * ``(define duck 4)``
 * ``(number? duck)  => #t``
 * ``(set! duck 'quack)``
-* ``(number> duck)  => #f``
+* ``(number? duck)  => #f``
 
 ----
 
@@ -272,6 +272,7 @@ Procedures are variables
 ========================
 
 ::
+
     scheme@(guile-user)> (define (foo x) x)
     scheme@(guile-user)> ,tr (foo 4)
     trace: |  (#<procedure 1cf50e0> #(#<directory (guile-user) 1434c60> #f))
@@ -295,6 +296,7 @@ Procedures are variables
 ========================
 
 ::
+
     scheme@(guile-user)> (define (foo x) (display "I refuse"))
     scheme@(guile-user)> ,tr (bar 4)
     trace: |  (#<procedure 1d7b100> #(#<directory (guile-user) 1434c60> #f))
