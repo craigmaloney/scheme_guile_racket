@@ -380,6 +380,39 @@ Another Conditional
 
 ----
 
+Equality
+========
+
+* ``eq?`` => Return #t if x and y are the same object, except for numbers and characters.
+
+  * ``(define foo 5)``
+  * ``(define bar foo)``
+  * ``(eq? foo bar)  => #t``
+  * ``(eq? foo 5)  => #t``
+
+  * ``(define foo "5")``
+  * ``(define bar "5")``
+  * ``(eq? foo bar)  => #f``
+
+----
+
+Equality (cont.)
+================
+
+* ``equal?`` => Return #t if x and y are the same type, and their contents or value are equal.
+
+  * ``(define foo "5")``
+  * ``(define bar "5")``
+  * ``(equal? foo bar)  => #t``
+  * ``(string=? foo bar)  => #t``
+
+  * ``(define foo '(3 4 5)``
+  * ``(define bar '(3 4 5)``
+  * ``(equal? foo bar)  =>  #t``
+  * ``(eq? foo bar)  => #f``
+
+----
+
 Fibonacci Sequence
 ==================
 
@@ -440,3 +473,28 @@ Closures
     scheme@(guile-user)> (counter 4)
     $3 = 12
     scheme@(guile-user)> 
+
+----
+
+.. image:: images/taste.jpg
+   :width: 500px
+
+----
+
+Implementations...
+==================
+
+----
+
+Guile
+=====
+
+----
+
+Guile
+=====
+
+* Part of the GNU Project
+* GNU Ubiquitous Intelligent Language for Extensions
+   
+----
