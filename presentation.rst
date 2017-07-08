@@ -420,3 +420,23 @@ Local Variables / Environment
     (display s)  => 42
 
 ----
+
+Closures
+========
+
+
+::
+
+    (define counter
+      (let ((count 0)) 
+        (lambda (x) 
+          (set! count (+ x count))
+          count)))
+
+    scheme@(guile-user)> (counter 4)
+    $1 = 4
+    scheme@(guile-user)> (counter 4)
+    $2 = 8
+    scheme@(guile-user)> (counter 4)
+    $3 = 12
+    scheme@(guile-user)> 
