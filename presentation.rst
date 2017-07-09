@@ -12,6 +12,7 @@ Introduction to Scheme, Guile, and Racket
 * Author: Craig Maloney
 * Email: craig@decafbad.net
 * Website: http://decafbad.net
+* Artwork: David Revoy (CC-BY 4.0) http://peppercarrot.com
 
 ----
 
@@ -496,5 +497,56 @@ Guile
 
 * Part of the GNU Project
 * GNU Ubiquitous Intelligent Language for Extensions
-   
+* Allows developers to use Scheme as an extension language in C code
+* Used in Guix, GNU Cash, GDB, Lilypond, and more
+* Not just for Scheme; also has partial ECMASCript 3 support
+
 ----
+
+Demo of Guile
+=============
+
+----
+
+Racket
+======
+
+----
+
+Racket
+======
+
+* Started off life as PLT Scheme, renamed "Racket" at version 5.0
+* Used as a teaching language
+* Described in several books (How to Learn Programming, Realm of Racket)
+* Adds many procedures to Scheme, and includes a graphical IDE (DrRacket)
+ 
+----
+
+Demo of DrRacket
+================
+
+----
+
+Further down the rabbit hole
+============================
+
+----
+
+Further reading
+===============
+
+----
+
+Thank you!
+==========
+
+----
+
+Introduction to Scheme, Guile, and Racket
+=========================================
+
+* Author: Craig Maloney
+* Email: craig@decafbad.net
+* Website: http://decafbad.net
+* Artwork: David Revoy (CC-BY 4.0) http://peppercarrot.com
