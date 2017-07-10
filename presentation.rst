@@ -546,10 +546,24 @@ Demo of DrRacket
 Further down the rabbit hole
 ============================
 
+.. image:: images/black_hole.jpg
+   :width: 800px
+
 ----
 
 Further reading
 ===============
+
+* Structures and Interpretation of Computer Programming
+
+  * ``https://mitpress.mit.edu/sicp/full-text/book/book.html``
+
+* How to Design Programs
+
+  * ``http://www.htdp.org/``
+    
+* The Little Schemer / The Seasoned Schemer
+* Realm of Racket
 
 ----
 
