@@ -355,6 +355,17 @@ Procedures are variables
 
 ----
 
+Lambda
+======
+
+* ``(define (square x) (* x x))``
+* ``(define square (lambda (x) (* x x)))``
+* ``(square 4)  => 16`` 
+* ``(lambda (x) (* x x))  => #<procedure 257c380 at <current input>:3:0 (x)>``
+* ``((lambda (x) (* x x)) 4)  => 16``
+
+----
+
 Conditionals
 ============
 
@@ -435,17 +446,45 @@ Fibonacci Sequence
 Map
 ===
 
-* ``(map (lambda (x) (* x x)) '(1 2 3 4 5)``
-* ``=> (1 4 9 16 25)``
+``(map (lambda (x) (* x x)) '(1 2 3 4 5)``
+
+``=> (1 4 9 16 25)``
 
 ----
 
 Filter
 ======
 
-* ``(filter (lambda (x) (zero? (remainder x 2))) '(4 5 6 6 7 8))``
-* ``=> (4 6 6 8)``
+``(filter (lambda (x) (zero? (remainder x 2))) '(4 5 6 6 7 8))``
+
+``=> (4 6 6 8)``
+
+``(filter (lambda (x) (number? x)) '(3 4 5 "no"))``
+
+``=> (3 4 5)``
            
+----
+
+The difference between map and filter
+=====================================
+
+* ``map`` applies the function / procedure against all items:
+
+``(map (lambda (x) (number? x)) '(3 4 5 "no"))``
+
+``=> (#t #t #t #f)``
+
+----
+
+The difference between map and filter
+=====================================
+
+* ``filter`` only permits items that return true in the procedure / function:
+
+``(map (lambda (x) (number? x)) '(3 4 5 "no"))``
+
+``=> (3 4 5)``
+
 ----
 
 Local Variables / Environment
@@ -514,7 +553,7 @@ Guile
 * GNU Ubiquitous Intelligent Language for Extensions
 * Allows developers to use Scheme as an extension language in C code
 * Used in Guix, GNU Cash, GDB, Lilypond, and more
-* Not just for Scheme; also has partial ECMASCript 3 support
+* Not just for Scheme; also has partial ECMAScript 3 support
 
 ----
 
