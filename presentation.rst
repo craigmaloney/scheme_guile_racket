@@ -429,6 +429,22 @@ Fibonacci Sequence
 
     scheme@(guile-user) [2]> (fib 30)
     $3 = 832040
+
+----
+
+Map
+===
+
+* ``(map (lambda (x) (* x x)) '(1 2 3 4 5)``
+* ``=> (1 4 9 16 25)``
+
+----
+
+Filter
+======
+
+* ``(filter (lambda (x) (zero? (remainder x 2))) '(4 5 6 6 7 8))``
+* ``=> (4 6 6 8)``
            
 ----
 
@@ -457,7 +473,6 @@ Local Variables / Environment
 
 Closures
 ========
-
 
 ::
 
