@@ -629,16 +629,20 @@ Further down the rabbit hole
 Further reading
 ===============
 
-* Structures and Interpretation of Computer Programming
-
-  * ``https://mitpress.mit.edu/sicp/full-text/book/book.html``
-
-* How to Design Programs
-
-  * ``http://www.htdp.org/``
-    
+* `Structures and Interpretation of Computer Programming <https://mitpress.mit.edu/sicp/full-text/book/book.html>`_
+* `How to Design Programs <http://www.htdp.org/>`_
+* `Realm of Racket <http://realmofracket.com/>`_
+* `Guile Manual <https://www.gnu.org/software/guile/manual/>`_
 * The Little Schemer / The Seasoned Schemer
-* Realm of Racket
+
+----
+
+Links
+=====
+
+* `Schemers.org <http://schemers.org/>`_
+* `SICP Guile <https://github.com/zv/SICP-guile>`_
+* `Learn Scheme in 15 minutes <https://github.com/zv/SICP-guile>`_
 
 ----
 
