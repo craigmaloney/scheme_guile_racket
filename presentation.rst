@@ -163,11 +163,11 @@ A Few Basic Datatypes
 
 Atoms:
 
-* 2
-* 4.2
-* "Hello World"
-* #f
-* a
+* ``2``
+* ``4.2``
+* ``"Hello World"``
+* ``#f``
+* ``'a``
 
 ----
 
@@ -206,11 +206,18 @@ Datatypes (cont.):
 Quick note on symbols / strings
 ===============================
 
-Symbols are "interned", so there is only one copy stored of a particular symbol:
+Symbols are "interned"; there is only one copy stored of a particular symbol:
 
 * ``(define foo 'quack)``
 * ``(define bar 'quack)``
 * ``(eq? foo bar)  => #t``
+
+----
+
+Quick note on symbols / strings
+===============================
+
+Strings are not; each string is a separate object:
 
 * ``(define foo "quack")``
 * ``(define bar "quack")``
@@ -218,17 +225,12 @@ Symbols are "interned", so there is only one copy stored of a particular symbol:
 
 ----
 
-Um, OK...
-=========
-
-----
-
 Arithmetic Operators
 ====================
 
-* ``(+ 1 2)``  => 3
-* ``(- 1 3)``  => -2
-* ``(* 3 2)``  => 6
+* ``(+ 2 3)``  => 5
+* ``(- 2 3)``  => -1
+* ``(* 2 3)``  => 6
 * ``(/ 2 3)``  => 2/3
 
 ----
@@ -284,7 +286,7 @@ Built-in functions
 * ``(number? 4)``  => #t
 * ``(number? 'moo)``  => #f
 * ``(symbol? 'moo)``  => #t
-* ``(symbol? 4)``  => #f
+* ``(zero? 4)``  => #f
 * ``(string? "Hello, I am a string")``  => #t
 * ``(null? '())``  => #t
 * ``(list? '())``  => #t
@@ -304,7 +306,7 @@ Pythagorean Theorem in Scheme
 
 (Remember: a^2 + b^2 = c^2)
 
-* ``(+ (square 5) (square 6))``
+* ``(+ (square 5) (square 6))  => 61``
 
 ----
 
@@ -366,6 +368,25 @@ Lambda
 
 ----
 
+Multiple Arguments
+==================
+
+Immediately-invoked Lambda:
+
+* ``((lambda (x y) (+ x y)) 3 4) => 7``
+
+Procedure:
+
+* ``(define (add2 x y) (+ x y))``
+* ``(add2 3 4)  => 7``
+
+Lambda Procedure:
+
+* ``(define ladd2 (lambda (x y) (+ x y))``
+* ``(ladd2 3 4)  => 7``
+
+----
+
 Conditionals
 ============
 
@@ -392,8 +413,8 @@ Another Conditional
 
 ----
 
-Equality
-========
+Equality (eq)
+=============
 
 * ``eq?`` => Return #t if x and y are the same object, except for numbers and characters.
 
@@ -402,13 +423,20 @@ Equality
   * ``(eq? foo bar)  => #t``
   * ``(eq? foo 5)  => #t``
 
+----
+
+Equality (eq)
+=============
+
+* ``eq?`` => Return #t if x and y are the same object, except for numbers and characters.
+
   * ``(define foo "5")``
   * ``(define bar "5")``
   * ``(eq? foo bar)  => #f``
 
 ----
 
-Equality (cont.)
+Equality (equal)
 ================
 
 * ``equal?`` => Return #t if x and y are the same type, and their contents or value are equal.
@@ -417,6 +445,14 @@ Equality (cont.)
   * ``(define bar "5")``
   * ``(equal? foo bar)  => #t``
   * ``(string=? foo bar)  => #t``
+
+----
+
+Equality (equal)
+================
+
+* ``equal?`` => Return #t if x and y are the same type, and their contents or value are equal.
+
 
   * ``(define foo '(3 4 5)``
   * ``(define bar '(3 4 5)``
@@ -479,9 +515,9 @@ The difference between map and filter
 The difference between map and filter
 =====================================
 
-* ``filter`` only permits items that return true in the procedure / function:
+* ``filter`` only permits items that return #t in the procedure / function:
 
-``(map (lambda (x) (number? x)) '(3 4 5 "no"))``
+``(filter (lambda (x) (number? x)) '(3 4 5 "no"))``
 
 ``=> (3 4 5)``
 
