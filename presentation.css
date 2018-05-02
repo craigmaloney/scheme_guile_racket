@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
 
+div#crockford {
+    margin-left: -1in;
+}
+
+div#scheme {
+    margin-left: -2in;
+}
+
 body {
     font-size: 200%;
     text-align: center;

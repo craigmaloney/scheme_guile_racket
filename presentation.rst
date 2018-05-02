@@ -24,13 +24,22 @@ Three Types of Folks...
 .. image:: images/scared.jpg
     :width: 800px
 
+.. note::
+    You've heard a little bit about LISP and have heard horror stories about it. You're bracing yourself for being overwhelmed with LISP and an arcane syntax of cars and cdrs (but you came to the talk anyway, so that's cool!).
+
 ----
 
 .. image:: images/flying.gif
 
+.. note::
+    You've dabbled with LISP and want to dive in and learn more (and believe me, once you've dived in it never ends, much like this .gif)
+
 ----
 
 .. image:: images/laser.gif
+
+.. note::
+    You just thought this was interesting but have no idea what those two last slides were about (but that's OK, because Scheme is designed as a teaching language, and Racket even more so).
 
 
 ----
@@ -40,8 +49,8 @@ Our story begins...
 
 ----
 
-Learning JavaScript...
-======================
+Craig Decides to Learn JavaScript...
+====================================
 
 ----
 
@@ -69,6 +78,8 @@ But it's not as orthogonal as you might imagine...
 ==================================================
 
 ----
+
+:id: crockford
 
 ::
 
@@ -139,17 +150,28 @@ What's a Scheme?
 
 ----
 
-Alas:
-=====
+:id: scheme
 
-Alas: Scheme has the unhappy distinction of being the world's most unportable programming language. It is almost misleading to call Scheme a "programming language;" it would be more accurate to characterise Scheme as a family of dialects, all loosely related by the common features of lexical scope, dynamic typing, list structure, higher-order functions, proper tail-recursion, garbage collection, macros, and (some form of) s-expression based lexical syntax.
-
+Alas...
+=======
 
 ::
 
-    http://www.scheme-reports.org/2009/position-statement.html
-    http://ur1.ca/r1dgx
+    Alas: Scheme has the unhappy distinction of being the world's most
+    unportable programming language. It is almost misleading to call Scheme a
+    "programming language;" it would be more accurate to characterise Scheme as
+    a family of dialects, all loosely related by the common features of lexical
+    scope, dynamic typing, list structure, higher-order functions, proper
+    tail-recursion, garbage collection, macros, and (some form of) s-expression
+    based lexical syntax.
 
+    [...]
+
+    This has led to a great deal of unnecessary fragmentation and duplication
+    of effort: instead of standing on the shoulders of previous programmers,
+    Schemers step on each others' toes.
+
+    http://www.scheme-reports.org/2009/position-statement.html
 
 ----
 
